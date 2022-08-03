@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     if post.save
       render json: post
     else
-      render json: { errors: post.errors.full_messages }, status: :bad_request
+      render json: { errors: post.errors.full_messages }, status: 422
     end
   end
 
